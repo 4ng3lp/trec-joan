@@ -7,7 +7,7 @@ netsh wlan show profile | Select-String '(?<=Perfil de todos los usuarios\s+:\s)
     $wlan  = $_.Matches.Value;
     $nw =$nw+"      "+ [string]$wlan +" => "+  [string]$env:username +"\r\n";
   }
-  netsh wlan show profile | Select-String '(?<=All users profiles\s+:\s).+' | ForEach-Object {
+  netsh wlan show profile | Select-String '(?<=All User Profile\s+:\s).+' | ForEach-Object {
     $wlan  = $_.Matches.Value;
     $nw =$nw+"      "+ [string]$wlan +" => "+  [string]$env:username +"\r\n";
   }
