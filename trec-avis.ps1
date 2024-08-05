@@ -1,7 +1,7 @@
 Add-Type -AssemblyName PresentationCore,PresentationFramework;
 Add-Type -AssemblyName System.Speech
-$synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
-$synth.Speak("Hoooolaaaa $env:USERNAME, A ver, alma de cantaro. ¿Como se te ocurre meter un usb? ¡Que eres muy tonto!")
+#$synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
+#$synth.Speak("Hoooolaaaa $env:USERNAME, A ver, alma de cantaro. ¿Como se te ocurre meter un usb? ¡Que eres muy tonto!")
 
 # Play a single file
 Add-Type -AssemblyName presentationCore
