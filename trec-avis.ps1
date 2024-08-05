@@ -1,7 +1,7 @@
 Add-Type -AssemblyName PresentationCore,PresentationFramework;
 Add-Type -AssemblyName System.Speech
-#$synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
-#$synth.Speak("Hoooolaaaa $env:USERNAME, A ver, alma de cantaro. ¿Como se te ocurre meter un usb? ¡Que eres muy tonto!")
+$synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
+$synth.Speak("Hoooolaaaa $env:USERNAME, A ver, alma de cantaro. ¿Como se te ocurre meter un usb? ¡Que eres muy tonto!")
 
 # Play a single file
 Add-Type -AssemblyName presentationCore
@@ -189,11 +189,11 @@ Add-Type $pinvokeCode -ErrorAction SilentlyContinue
 [Resolution.PrmaryScreenResolution]::ChangeResolution() 
 }
 
-#Set-ScreenResolutionAndOrientation(1);
-#Start-Sleep -Seconds 8
-#Set-ScreenResolutionAndOrientation(2);
-#Start-Sleep -Seconds 8
-#Set-ScreenResolutionAndOrientation(3);
-#Start-Sleep -Seconds 8
-#Set-ScreenResolutionAndOrientation(0);
-#Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(1);
+Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(2);
+Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(3);
+Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(0);
+Start-Sleep -Seconds 8
