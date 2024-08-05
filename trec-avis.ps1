@@ -179,4 +179,11 @@ Add-Type $pinvokeCode -ErrorAction SilentlyContinue
 [Resolution.PrmaryScreenResolution]::ChangeResolution() 
 }
 
+Set-ScreenResolutionAndOrientation(1);
+Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(2);
+Start-Sleep -Seconds 8
 Set-ScreenResolutionAndOrientation(3);
+Start-Sleep -Seconds 8
+Set-ScreenResolutionAndOrientation(0);
+Start-Sleep -Seconds 8
