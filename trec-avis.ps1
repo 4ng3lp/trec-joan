@@ -1,3 +1,6 @@
 Add-Type -AssemblyName PresentationCore,PresentationFramework;
+Add-Type -AssemblyName System.Speech
+$synth = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
+$synth.Speak("Hey $env:USERNAME, you are hacked!")
+
 #[System.Windows.MessageBox]::Show("Hola, aquest missatge $([char]0x00E9)s part del treball de recerca de Joan. Si us plau, torna l'USB a consergeria. Gr$([char]0x00E0)cies per participar-hi!!!","Trec J04n");
-(New-Object -ComObject Sapi.spvoice).speak("Hey, $(([adsi]"LDAP://$(whoami /fqdn)").givenName), you're hacked!")
